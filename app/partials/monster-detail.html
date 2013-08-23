@@ -1,0 +1,119 @@
+<div class="col-md-6">
+    <h1>{{monster.name}}</h1>
+
+    <p>{{monster.description}}</p>
+
+    <ul class="specs">
+        <li>
+            <span>{{monster.Size}} {{monster.Type}}</span>
+            <dl>
+                <dt>Envrioments</dt>
+                <dd ng-repeat="monster.environments">{{environments}}</dd>
+            </dl>
+        </li>
+        <li>
+            <span>Abilities</span>
+            <dl ng-repeat="ability in monster.abilities">
+                <dd><b>{{ability.name}}:</b> {{ability.score}}</dd>
+            </dl>
+        </li>
+        <br />
+        <li>
+            <span>Armor Class</span>
+            <dl>
+                <dt>Normal</dt>
+                <dd>{{monster.armorClass.normal}}</dd>
+                <dt>Touch</dt>
+                <dd>{{monster.armorClass.touch}}</dd>
+                <dt>Flat Footed</dt>
+                <dd>{{monster.armorClass.flatFooted}}</dd>
+            </dl>
+        </li>
+        <li>
+            <span>Attacks</span>
+            <dl>
+                <dt>Base Attack</dt>
+                <dd>{{monster.baseAttack}}</dd>
+                <dt>Grapple</dt>
+                <dd>{{monster.grapple}}</dd>
+            </dl>
+        </li>
+        <li>
+            <span>Basic Attack</span>
+            <dl>
+                <dt>{{monster.attack.name}} ({{monster.attack.type}})</dt>
+                <dd>Hit: {{monster.attack.toHit}}</dd>
+                <dd>Damage: {{monster.attack.damage}}</dd>
+            </dl>
+        </li>
+        <li>
+            <span>Full Attack</span>
+            <dl ng-repeat="attack in monster.fullAttack">
+                <dt>{{monster.attack.name}} ({{monster.attack.type}})</dt>
+                <dd>Hit: {{monster.attack.toHit}}</dd>
+                <dd>Damage: {{monster.attack.damage}}</dd>
+            </dl>
+        </li>
+        <li>
+            <span>Android</span>
+            <dl>
+                <dt>OS Version</dt>
+                <dd>{{monster.android.os}}</dd>
+                <dt>UI</dt>
+                <dd>{{monster.android.ui}}</dd>
+            </dl>
+        </li>
+        <li>
+            <span>Size and Weigth</span>
+            <dl>
+                <dt>Dimensions</dt>
+                <dd ng-repeat="dim in monster.sizeAndWeight.dimensions">{{dim}}</dd>
+                <dt>Weight</dt>
+                <dd>{{monster.sizeAndWeight.weight}}</dd>
+            </dl>
+        </li>
+        <li>
+            <span>Display</span>
+            <dl>
+                <dt>Screen size</dt>
+                <dd>{{monster.display.screenSize}}</dd>
+                <dt>Screen resolution</dt>
+                <dd>{{monster.display.screenResolution}}</dd>
+                <dt>Touch screen</dt>
+                <dd>{{monster.display.touchScreen | checkmark}}</dd>
+            </dl>
+        </li>
+        <li>
+            <span>Hardware</span>
+            <dl>
+                <dt>CPU</dt>
+                <dd>{{monster.hardware.cpu}}</dd>
+                <dt>USB</dt>
+                <dd>{{monster.hardware.usb}}</dd>
+                <dt>Audio / headmonster jack</dt>
+                <dd>{{monster.hardware.audioJack}}</dd>
+                <dt>FM Radio</dt>
+                <dd>{{monster.hardware.fmRadio | checkmark}}</dd>
+                <dt>Accelerometer</dt>
+                <dd>{{monster.hardware.accelerometer | checkmark}}</dd>
+            </dl>
+        </li>
+        <li>
+            <span>Camera</span>
+            <dl>
+                <dt>Primary</dt>
+                <dd>{{monster.camera.primary}}</dd>
+                <dt>Features</dt>
+                <dd>{{monster.camera.features.join(', ')}}</dd>
+            </dl>
+        </li>
+        <li>
+            <span>Additional Features</span>
+            <dd>{{monster.additionalFeatures}}</dd>
+        </li>
+    </ul>
+</div>
+<div class="col-md-6">
+    <img ng-src="{{mainImageUrl}}" class="monster">
+</div>
+

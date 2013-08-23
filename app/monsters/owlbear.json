@@ -1,24 +1,99 @@
 {
-    "Size/Type":	Large Magical Beast
-Hit Dice:	5d10+25 (52 hp)
-Initiative:	+1
-Speed:	30 ft. (6 squares)
-Armor Class:	15 (-1 size, +1 Dex, +5 natural), touch 10, flat-footed 14
-Base Attack/Grapple:	+5/+14
-Attack:	Claw +9 melee (1d6+5)
-Full Attack:	2 claws +9 melee (1d6+5) and bite +4 melee (1d8+2)
-Space/Reach:	10 ft./5 ft.
-Special Attacks:	Improved grab
-Special Qualities:	Scent
-Saves:	Fort +9, Ref +5, Will +2
-Abilities:	Str 21, Dex 12, Con 21, Int 2, Wis 12, Cha 10
-Skills:	Listen +8, Spot +8
-Feats:	Alertness, Track
-Environment:	Temperate forests
-Organization:	Solitary, pair, or pack (3-8)
-Challenge Rating:	4
-Treasure:	None
-Alignment:	Always neutral
-Advancement:	6-8 HD (Large); 9-15 HD (Huge)
-Level Adjustment:	—
+    "name"             : "Owlbear",
+    "description"      : "An owlbear’s coat ranges in color from brown-black to yellowish brown; its beak is a dull ivory color. A full-grown male can stand as tall as 8 feet and weigh up to 1,500 pounds. Adventurers who have survived encounters with the creature often speak of the bestial madness they glimpsed in its red-rimmed eyes.",
+    "Size"             : "Large",
+    "Type"             : "Magical Beast",
+    "HitDice"          : "5d10+25",
+    "hp"               : "52",
+    "Initiative"       : "1",
+    "Speed"            : {
+        "land": {
+            "feet"   : "30",
+            "squares": "6"
+        }
+    },
+    "armorClass"       : {
+        "normal"    : "15",
+        "mods"      : {
+            "size"   : "-1",
+            "dex"    : "+1",
+            "natural": "5"
+        },
+        "touch"     : "10",
+        "flatFooted": "14"
+    },
+    "baseAttack"       : "5",
+    "grapple"          : "14",
+    "attack"           : {
+        "name"  : "Claw",
+        "toHit" : "9",
+        "type"  : "melee",
+        "damage": "1d6+5"
+    },
+    "fullAttack"       : [
+        {
+            "name"  : "left claw",
+            "toHit" : "9",
+            "type"  : "melee",
+            "damage": "1d6+5"
+        },
+        {
+            "name"  : "left claw",
+            "toHit" : "9",
+            "type"  : "melee",
+            "damage": "1d6+5"
+        },
+        {
+            "name"  : "bite",
+            "toHit" : "4",
+            "type"  : "melee",
+            "damage": "1d8+2"
+        }
+    ],
+    "Space/Reach"      : "10 ft./5 ft.",
+    "Special Attacks"  : "Improved grab",
+    "Special Qualities": "Scent",
+    "Saves"            : ["Fort +9", "Ref +5", "Will +2"],
+    "abilities"        : [
+        {
+            "name" : "Strength",
+            "score": "21"
+        },
+        {
+            "name" : "Dexterity",
+            "score": "12"
+        },
+        {
+            "name" : "Constitution",
+            "score": "21"
+        },
+        {
+            "name" : "Intelligence",
+            "score": "2"
+        },
+        {
+            "name" : "Wisdom",
+            "score": "12"
+        },
+        {
+            "name" : "Charisma",
+            "score": "10"
+        }
+
+    ],
+    "Skills"           : [
+        {
+            "Listen": "8",
+            "Spot"  : "8"
+        }
+    ],
+    "Feats"            : ["Alertness", "Track"],
+    "environments"     : ["Temperate forests"],
+    "Organization"     : ["Solitary", "pair", "pack (3-8)"],
+    "Challenge Rating" : "4",
+    "Treasure"         : "None",
+    "Alignment"        : "Always neutral",
+    "Advancement"      : "6-8 HD (Large); 9-15 HD (Huge)",
+    "Level Adjustment" : "—",
+    "image"            : "img/monsters/owlbear.jpg"
 }

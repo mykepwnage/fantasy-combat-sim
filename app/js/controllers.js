@@ -6,14 +6,11 @@ function MonsterListCtrl($scope, Monster) {
   $scope.monsters = Monster.query();
   $scope.orderProp = 'age';
 }
-
 //MonsterListCtrl.$inject = ['$scope', 'Monster'];
-
-
 
 function MonsterDetailCtrl($scope, $routeParams, Monster) {
   $scope.monster = Monster.get({monsterId: $routeParams.monsterId}, function(monster) {
-    $scope.mainImageUrl = monster.images[0];
+    $scope.mainImageUrl = monster.image;
   });
 
   $scope.setImage = function(imageUrl) {
