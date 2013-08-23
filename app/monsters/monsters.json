@@ -5,5 +5,12 @@
         "imageUrl": "img/monsters/owlbear.jpg",
         "name"    : "Owlbear",
         "snippet" : "An owlbear’s coat ranges in color from brown-black to yellowish brown; its beak is a dull ivory color. A full-grown male can stand as tall as 8 feet and weigh up to 1,500 pounds. Adventurers who have survived encounters with the creature often speak of the bestial madness they glimpsed in its red-rimmed eyes."
+    },
+    {
+        "age"     : 1,
+        "id"      : "redDragon",
+        "imageUrl": "img/monsters/redDragon.jpg",
+        "name"    : "Red Dragon",
+        "snippet" : "Red dragons are covetous, evil creatures, interested only in their own well-being, vanity and the extension of their treasure hoards. They are supremely confident of their own abilities and are prone to making snap decisions without any forethought. The most powerful of the chromatic dragons, red dragons breathe a cone of fire.  Red Dragons are the most fearsome and cruel of the chromatic dragons. They delight in ruin, death, and destruction."
     }
 ]

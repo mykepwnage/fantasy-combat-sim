@@ -1,0 +1,116 @@
+{
+    "id"               : "redDragon",
+    "name"             : "Red Dragon (Wyrmling)",
+    "description"      : "Red dragons are covetous, evil creatures, interested only in their own well-being, vanity and the extension of their treasure hoards. They are supremely confident of their own abilities and are prone to making snap decisions without any forethought. The most powerful of the chromatic dragons, red dragons breathe a cone of fire.[1]Red Dragons are the most fearsome and cruel of the chromatic dragons. They delight in ruin, death, and destruction.",
+    "Size"             : "Medium",
+    "Type"             : "Dragon (Fire) ",
+    "HitDice"          : "7d12+14",
+    "hp"               : "59",
+    "Initiative"       : "0",
+    "Speed"            : {
+        "land": {
+            "feet"   : "40",
+            "squares": "8"
+        },
+        "fly" : {
+            "feet"           : "150",
+            "squares"        : "30",
+            "maneuverability": "poor"
+        }
+    },
+    "armorClass"       : {
+        "normal"    : "16",
+        "mods"      : {
+            "size"   : "0",
+            "dex"    : "0",
+            "natural": "6"
+        },
+        "touch"     : "10",
+        "flatFooted": "16"
+    },
+    "baseAttack"       : "7",
+    "grapple"          : "10",
+    "attack"           : {
+        "name"  : "Bite",
+        "toHit" : "10",
+        "type"  : "melee",
+        "damage": "1d8+3"
+    },
+    "fullAttack"       : [
+        {
+            "name"  : "left claw",
+            "toHit" : "10",
+            "type"  : "melee",
+            "damage": "1d6+3"
+        },
+        {
+            "name"  : "right claw",
+            "toHit" : "10",
+            "type"  : "melee",
+            "damage": "1d6+3"
+        },
+        {
+            "name"  : "bite",
+            "toHit" : "10",
+            "type"  : "melee",
+            "damage": "1d8+3"
+        }
+    ],
+    "Space/Reach"      : "5 ft./5 ft.",
+    "Special Attacks"  : "Breath weapon",
+    "Special Qualities": ["Immunity to fire", "vulnerability to cold"],
+    "saves"            : {
+        "fort": "7",
+        "ref" : "5",
+        "will": "5"
+    },
+    "abilities"        : [
+        {
+            "name" : "Strength",
+            "score": "17"
+        },
+        {
+            "name" : "Dexterity",
+            "score": "10"
+        },
+        {
+            "name" : "Constitution",
+            "score": "15"
+        },
+        {
+            "name" : "Intelligence",
+            "score": "10"
+        },
+        {
+            "name" : "Wisdom",
+            "score": "11"
+        },
+        {
+            "name" : "Charisma",
+            "score": "10"
+        }
+
+    ],
+    "Skills"           : [
+        {
+            "Appraise": "8",
+            "Bluff"   : "8",
+            "Jump"    : "8"
+        }
+    ],
+    "Feats"            : ["Alertness", "Track"],
+    "environments"     : [
+        {
+            "temperature": "Warm",
+            "terrain"    : "mountains"
+        }
+
+    ],
+    "Organization"     : ["Solitary"],
+    "Challenge Rating" : "4",
+    "Treasure"         : "Triple standard",
+    "Alignment"        : "Always chaotic evil",
+    "Advancement"      : "8-9 HD",
+    "Level Adjustment" : "+4",
+    "image"            : "img/monsters/redDragon.jpg"
+}

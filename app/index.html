@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Roar</title>
     <link rel="stylesheet" href="css/app.css">
-    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
     <script src="lib/angular/angular.js"></script>
     <script src="js/app.js"></script>
     <script src="js/controllers.js"></script>
@@ -13,7 +13,11 @@
     <script src="lib/angular/angular-resource.js"></script>
 </head>
 <body>
-
+<div class="navbar">
+    <a class="btn btn-default" href="#/yourMonster">Your Monster</a>
+    <a class="btn btn-default" href="#/monsters">Monster Index</a>
+    <a class="btn btn-danger" href="#/fight/redDragon/owlbear">Red Dragon vs Owlbear</a>
+</div>
 <div ng-view></div>
 
 </body>

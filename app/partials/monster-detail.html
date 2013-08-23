@@ -1,119 +1,127 @@
-<div class="col-md-6">
+<div class="col-md-7">
     <h1>{{monster.name}}</h1>
 
-    <p>{{monster.description}}</p>
+    <h3>{{monster.Size}} {{monster.Type}}</h3>
 
-    <ul class="specs">
-        <li>
-            <span>{{monster.Size}} {{monster.Type}}</span>
-            <dl>
-                <dt>Envrioments</dt>
-                <dd ng-repeat="monster.environments">{{environments}}</dd>
-            </dl>
-        </li>
-        <li>
-            <span>Abilities</span>
-            <dl ng-repeat="ability in monster.abilities">
-                <dd><b>{{ability.name}}:</b> {{ability.score}}</dd>
-            </dl>
-        </li>
-        <br />
-        <li>
-            <span>Armor Class</span>
-            <dl>
-                <dt>Normal</dt>
-                <dd>{{monster.armorClass.normal}}</dd>
-                <dt>Touch</dt>
-                <dd>{{monster.armorClass.touch}}</dd>
-                <dt>Flat Footed</dt>
-                <dd>{{monster.armorClass.flatFooted}}</dd>
-            </dl>
-        </li>
-        <li>
-            <span>Attacks</span>
-            <dl>
-                <dt>Base Attack</dt>
-                <dd>{{monster.baseAttack}}</dd>
-                <dt>Grapple</dt>
-                <dd>{{monster.grapple}}</dd>
-            </dl>
-        </li>
-        <li>
-            <span>Basic Attack</span>
-            <dl>
-                <dt>{{monster.attack.name}} ({{monster.attack.type}})</dt>
-                <dd>Hit: {{monster.attack.toHit}}</dd>
-                <dd>Damage: {{monster.attack.damage}}</dd>
-            </dl>
-        </li>
-        <li>
-            <span>Full Attack</span>
-            <dl ng-repeat="attack in monster.fullAttack">
-                <dt>{{monster.attack.name}} ({{monster.attack.type}})</dt>
-                <dd>Hit: {{monster.attack.toHit}}</dd>
-                <dd>Damage: {{monster.attack.damage}}</dd>
-            </dl>
-        </li>
-        <li>
-            <span>Android</span>
-            <dl>
-                <dt>OS Version</dt>
-                <dd>{{monster.android.os}}</dd>
-                <dt>UI</dt>
-                <dd>{{monster.android.ui}}</dd>
-            </dl>
-        </li>
-        <li>
-            <span>Size and Weigth</span>
-            <dl>
-                <dt>Dimensions</dt>
-                <dd ng-repeat="dim in monster.sizeAndWeight.dimensions">{{dim}}</dd>
-                <dt>Weight</dt>
-                <dd>{{monster.sizeAndWeight.weight}}</dd>
-            </dl>
-        </li>
-        <li>
-            <span>Display</span>
-            <dl>
-                <dt>Screen size</dt>
-                <dd>{{monster.display.screenSize}}</dd>
-                <dt>Screen resolution</dt>
-                <dd>{{monster.display.screenResolution}}</dd>
-                <dt>Touch screen</dt>
-                <dd>{{monster.display.touchScreen | checkmark}}</dd>
-            </dl>
-        </li>
-        <li>
-            <span>Hardware</span>
-            <dl>
-                <dt>CPU</dt>
-                <dd>{{monster.hardware.cpu}}</dd>
-                <dt>USB</dt>
-                <dd>{{monster.hardware.usb}}</dd>
-                <dt>Audio / headmonster jack</dt>
-                <dd>{{monster.hardware.audioJack}}</dd>
-                <dt>FM Radio</dt>
-                <dd>{{monster.hardware.fmRadio | checkmark}}</dd>
-                <dt>Accelerometer</dt>
-                <dd>{{monster.hardware.accelerometer | checkmark}}</dd>
-            </dl>
-        </li>
-        <li>
-            <span>Camera</span>
-            <dl>
-                <dt>Primary</dt>
-                <dd>{{monster.camera.primary}}</dd>
-                <dt>Features</dt>
-                <dd>{{monster.camera.features.join(', ')}}</dd>
-            </dl>
-        </li>
-        <li>
-            <span>Additional Features</span>
-            <dd>{{monster.additionalFeatures}}</dd>
-        </li>
-    </ul>
+    <div class="row">
+        <p class="description col-md-11">{{monster.description}}</p>
+    </div>
+    <!--Ability Scores-->
+    <div class="col-md-4">
+        <h4>Abilities</h4>
+
+        <div class="col-md-offset-1">
+            <!--<div class="col-md-5">Ability</div>-->
+            <!--<div class="col-md-3">Score</div>-->
+            <!--<div class="col-md-3">Modifier</div>-->
+            <div ng-repeat="ability in monster.abilities">
+                <div class="col-md-5"><b>{{ability.name}}</b></div>
+                <div class="col-md-3">{{ability.score}}</div>
+                <div class="col-md-3">{{mods}}</div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Saving Throws-->
+    <div class="col-md-4">
+        <h4>Saving Throws</h4>
+
+        <div class="col-md-offset-1">
+            <div class="row">
+                <div class="col-md-5"><b>Fortitude</b></div>
+                <div class="col-md-3">{{monster.saves.fort}}</div>
+            </div>
+            <div class="row">
+                <div class="col-md-5"><b>Reflex</b></div>
+                <div class="col-md-3">{{monster.saves.ref}}</div>
+            </div>
+            <div class="row">
+                <div class="col-md-5"><b>Will</b></div>
+                <div class="col-md-3">{{monster.saves.will}}</div>
+            </div>
+        </div>
+    </div>
+
+    <!--Armor Class-->
+    <div class="col-md-4">
+        <h4>Armor Class</h4>
+
+        <div class="col-md-offset-1">
+            <div class="row">
+                <div class="col-md-5"><b>Normal</b></div>
+                <div class="col-md-3">{{monster.armorClass.normal}}</div>
+            </div>
+            <div class="row">
+                <div class="col-md-5"><b>Touch</b></div>
+                <div class="col-md-3">{{monster.armorClass.touch}}</div>
+            </div>
+            <div class="row">
+                <div class="col-md-5"><b>Flat Footed</b></div>
+                <div class="col-md-3">{{monster.armorClass.flatFooted}}</div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row">
+
+        <!--Attacks-->
+        <div class="col-md-4">
+            <h4>Attacks</h4>
+
+            <div class="col-md-offset-1">
+                <div>Base Attack</div>
+                <div>{{monster.baseAttack}}</div>
+                <div>Grapple</div>
+                <div>{{monster.grapple}}</div>
+            </div>
+        </div>
+
+
+        <!--Basic-->
+        <div class="col-md-4">
+            <h4>Basic Attack</h4>
+
+            <div class="col-md-offset-1">
+                <div>{{monster.attack.name}} ({{monster.attack.type}})</div>
+                <div>Attack Bonus: {{monster.attack.toHit}}</div>
+                <div>Damage: {{monster.attack.damage}}</div>
+            </div>
+        </div>
+
+        <!--Full-->
+        <div class="col-md-4">
+            <h4>Full Attack</h4>
+
+            <div class="col-md-offset-1" ng-repeat="attack in monster.fullAttack">
+                <div>{{attack.name}} ({{attack.type}})</div>
+                <div>Attack Bonus: {{attack.toHit}}</div>
+                <div>Damage: {{attack.damage}}</div>
+                <br/>
+            </div>
+        </div>
+    </div>
+
+    <!--Environments-->
+    <div class="col-md-2">
+        <h4>Environments</h4>
+
+        <div class="col-md-offset-1" ng-repeat="environment in monster.environments">
+            <div>{{environment.temperature}} {{environment.terrain}}</div>
+        </div>
+    </div>
+
+
+    <!--Additional Features-->
+    <div class="col-md-6">
+        <h4>Additional Features</h4>
+        <div>{{monster.additionalFeatures}}</div>
+    </div>
 </div>
-<div class="col-md-6">
+<div class="col-md-5">
     <img ng-src="{{mainImageUrl}}" class="monster">
+    <a class="btn-danger" href="#/fight/{{monster.name}}">Fight the {{monster.name}}!!</a><br />
+    <a class="btn-success" href="#/yourMonster/{{monster.id}}">Make the {{monster.name}} <em>your</em> monster!!</a>
 </div>
 

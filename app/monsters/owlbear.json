@@ -1,4 +1,5 @@
 {
+    "id"               : "owlbear",
     "name"             : "Owlbear",
     "description"      : "An owlbear’s coat ranges in color from brown-black to yellowish brown; its beak is a dull ivory color. A full-grown male can stand as tall as 8 feet and weigh up to 1,500 pounds. Adventurers who have survived encounters with the creature often speak of the bestial madness they glimpsed in its red-rimmed eyes.",
     "Size"             : "Large",
@@ -38,7 +39,7 @@
             "damage": "1d6+5"
         },
         {
-            "name"  : "left claw",
+            "name"  : "right claw",
             "toHit" : "9",
             "type"  : "melee",
             "damage": "1d6+5"
@@ -53,7 +54,11 @@
     "Space/Reach"      : "10 ft./5 ft.",
     "Special Attacks"  : "Improved grab",
     "Special Qualities": "Scent",
-    "Saves"            : ["Fort +9", "Ref +5", "Will +2"],
+    "saves"            : {
+        "fort": "+9",
+        "ref" : "+5",
+        "will": "+2"
+    },
     "abilities"        : [
         {
             "name" : "Strength",
@@ -88,7 +93,12 @@
         }
     ],
     "Feats"            : ["Alertness", "Track"],
-    "environments"     : ["Temperate forests"],
+    "environments"     : [
+        {
+            "temperature": "Temperate",
+            "terrain"    : "forests"
+        }
+    ],
     "Organization"     : ["Solitary", "pair", "pack (3-8)"],
     "Challenge Rating" : "4",
     "Treasure"         : "None",
